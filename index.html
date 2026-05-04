@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AP Government & Politics — Ultimate Review Packet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #161920;
+    --border: #252830;
+    --text: #e8eaf0;
+    --muted: #8891a8;
+
+    /* Unit Colors */
+    --u1: #4f9cf9;      /* Unit 1 – Foundations: Electric Blue */
+    --u1-dim: #1a2e4a;
+    --u2: #a78bfa;      /* Unit 2 – Branches: Violet */
+    --u2-dim: #2a1e4a;
+    --u3: #f97316;      /* Unit 3 – Civil Liberties: Amber */
+    --u3-dim: #3a1e0a;
+    --u4: #34d399;      /* Unit 4 – Ideologies: Emerald */
+    --u4-dim: #0d3328;
+    --u5: #f472b6;      /* Unit 5 – Participation: Rose */
+    --u5-dim: #3a1028;
+    --docs: #fbbf24;    /* Foundational Docs: Gold */
+    --docs-dim: #3a2800;
+    --cases: #fb7185;   /* SCOTUS Cases: Coral */
+    --cases-dim: #3a1018;
+    --frq: #38bdf8;     /* FRQ: Sky Blue */
+    --frq-dim: #0a2030;
+    --tips: #86efac;    /* Tips: Mint */
+    --tips-dim: #0a2810;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #0d0f14 0%, #1a1030 50%, #0d0f14 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 50%, rgba(79,156,249,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(167,139,250,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 8vw, 96px);
+    letter-spacing: 0.04em;
+    line-height: 0.95;
+    background: linear-gradient(135deg, #4f9cf9, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto 32px;
+  }
+  .badge-row {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+  }
+  .badge {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: 1px solid;
+  }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  /* ── LEGEND ── */
+  .legend {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px;
+    margin: 48px auto;
+    max-width: 1100px;
+    margin-left: 32px; margin-right: 32px;
+  }
+  .legend-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+  }
+  .legend-sub { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+  .legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  .legend-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .legend-item:hover { transform: translateY(-2px); }
+  .legend-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  .legend-label { font-weight: 600; font-size: 14px; line-height: 1.3; }
+  .legend-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .legend-pages {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section {
+    margin: 0 32px 56px;
+    max-width: 1100px;
+    margin-left: 32px; margin-right: 32px;
+  }
+  .section-header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    opacity: 0.25;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  .section-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* ── CARDS ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .card-title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .card p { color: var(--muted); font-size: 13.5px; line-height: 1.65; }
+  .card ul { padding-left: 18px; }
+  .card li { color: var(--muted); font-size: 13.5px; margin-bottom: 5px; }
+  .card li strong { color: var(--text); }
+
+  /* ── ACCENT BOXES ── */
+  .accent-box {
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border-left: 4px solid;
+  }
+  .accent-box .box-title {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .accent-box p, .accent-box li { font-size: 13.5px; line-height: 1.65; }
+  .accent-box ul { padding-left: 18px; }
+
+  /* ── BIG TABLE ── */
+  .tbl-wrap { overflow-x: auto; margin-bottom: 24px; border-radius: 12px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead { background: var(--surface); }
+  thead th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody td { padding: 13px 16px; vertical-align: top; }
+  tbody tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* ── CASE CARDS ── */
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 14px;
+  }
+  .case-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--cases);
+  }
+  .case-name { font-weight: 700; font-size: 14.5px; color: var(--cases); margin-bottom: 4px; }
+  .case-year { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 8px; }
+  .case-issue { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+  .case-ruling { font-size: 13px; line-height: 1.6; }
+  .case-ruling strong { color: var(--cases); }
+  .case-tag {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--cases-dim);
+    color: var(--cases);
+    font-weight: 600;
+  }
+
+  /* ── DOC CARDS ── */
+  .doc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    border-left: 4px solid var(--docs);
+  }
+  .doc-name { font-weight: 700; font-size: 16px; color: var(--docs); margin-bottom: 6px; }
+  .doc-meta { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 10px; }
+  .doc-body { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+  .doc-body strong { color: var(--text); }
+
+  /* ── FRQ ── */
+  .frq-type {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .frq-type-header {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+  }
+  .frq-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--frq);
+    line-height: 1;
+  }
+  .frq-name { font-weight: 700; font-size: 16px; }
+  .frq-pts { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); }
+  .step-list { list-style: none; padding: 0; }
+  .step-list li {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13.5px;
+  }
+  .step-list li:last-child { border-bottom: none; }
+  .step-num {
+    background: var(--frq-dim);
+    color: var(--frq);
+    font-weight: 700;
+    font-size: 12px;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── EXAMPLE Q's ── */
+  .q-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 14px;
+  }
+  .q-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .q-text { font-weight: 500; font-size: 14.5px; margin-bottom: 16px; line-height: 1.6; }
+  .q-choices { list-style: none; padding: 0; }
+  .q-choices li {
+    padding: 9px 14px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 13.5px;
+    border: 1px solid var(--border);
+    cursor: default;
+  }
+  .q-choices li.correct { background: #0a2810; border-color: var(--u4); color: var(--u4); }
+  .q-explain {
+    margin-top: 12px;
+    padding: 12px 16px;
+    background: #0a2018;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--tips);
+    line-height: 1.6;
+    border-left: 3px solid var(--tips);
+  }
+  .q-explain strong { color: var(--text); }
+
+  /* ── TIPS ── */
+  .tip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .tip-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    border-top: 3px solid var(--tips);
+  }
+  .tip-icon { font-size: 24px; margin-bottom: 10px; }
+  .tip-title { font-weight: 700; font-size: 15px; margin-bottom: 8px; color: var(--tips); }
+  .tip-body { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 56px 32px;
+  }
+
+  /* ── ANCHOR OFFSET ── */
+  [id] { scroll-margin-top: 24px; }
+
+  /* ── HELPERS ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+  @media(max-width: 700px) {
+    .two-col, .three-col { grid-template-columns: 1fr; }
+    .hero { padding: 40px 20px; }
+    .section, .legend { margin-left: 16px; margin-right: 16px; }
+    .container { padding: 0 16px; }
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; color: black; }
+    .hero { background: #f0f0f0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<div class="hero">
+  <div class="hero-eyebrow">AP United States Government & Politics · Complete Review</div>
+  <h1>ULTIMATE<br>AP GOV<br>PACKET</h1>
+  <p class="hero-sub">Every unit. Every required document. Every required case. FRQ mastery. Exam tips. Color-coded.</p>
+  <div class="badge-row">
+    <span class="badge" style="color:var(--u1);border-color:var(--u1);background:var(--u1-dim)">Unit 1: Foundations</span>
+    <span class="badge" style="color:var(--u2);border-color:var(--u2);background:var(--u2-dim)">Unit 2: Branches</span>
+    <span class="badge" style="color:var(--u3);border-color:var(--u3);background:var(--u3-dim)">Unit 3: Civil Liberties</span>
+    <span class="badge" style="color:var(--u4);border-color:var(--u4);background:var(--u4-dim)">Unit 4: Ideologies</span>
+    <span class="badge" style="color:var(--u5);border-color:var(--u5);background:var(--u5-dim)">Unit 5: Participation</span>
+    <span class="badge" style="color:var(--docs);border-color:var(--docs);background:var(--docs-dim)">Foundational Docs</span>
+    <span class="badge" style="color:var(--cases);border-color:var(--cases);background:var(--cases-dim)">SCOTUS Cases</span>
+    <span class="badge" style="color:var(--frq);border-color:var(--frq);background:var(--frq-dim)">FRQ Mastery</span>
+    <span class="badge" style="color:var(--tips);border-color:var(--tips);background:var(--tips-dim)">Exam Tips</span>
+  </div>
+</div>
+
+<!-- ═══════════════════ LEGEND ═══════════════════ -->
+<div class="legend" id="legend">
+  <div class="legend-title">📍 TABLE OF CONTENTS</div>
+  <div class="legend-sub">Click any section to jump directly there. Color = topic category throughout this entire packet.</div>
+  <div class="legend-grid">
+    <a href="#unit1" class="legend-item" style="border-color:var(--u1)">
+      <div class="legend-dot" style="background:var(--u1)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--u1)">Unit 1 — Foundations of American Democracy</div>
+        <div class="legend-desc">Enlightenment ideas, Articles of Confederation, Constitutional Convention, Federalism, Democracy models</div>
+        <div class="legend-pages">Topics: ~12 key concepts</div>
+      </div>
+    </a>
+    <a href="#unit2" class="legend-item" style="border-color:var(--u2)">
+      <div class="legend-dot" style="background:var(--u2)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--u2)">Unit 2 — Interactions Among Branches</div>
+        <div class="legend-desc">Congress, President, Bureaucracy, Federal Courts, checks & balances</div>
+        <div class="legend-pages">Topics: ~14 key concepts</div>
+      </div>
+    </a>
+    <a href="#unit3" class="legend-item" style="border-color:var(--u3)">
+      <div class="legend-dot" style="background:var(--u3)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--u3)">Unit 3 — Civil Liberties &amp; Civil Rights</div>
+        <div class="legend-desc">Bill of Rights, 14th Amendment, selective incorporation, due process</div>
+        <div class="legend-pages">Topics: ~10 key concepts</div>
+      </div>
+    </a>
+    <a href="#unit4" class="legend-item" style="border-color:var(--u4)">
+      <div class="legend-dot" style="background:var(--u4)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--u4)">Unit 4 — American Political Ideologies &amp; Beliefs</div>
+        <div class="legend-desc">Public opinion, political socialization, ideology spectrum, polling</div>
+        <div class="legend-pages">Topics: ~8 key concepts</div>
+      </div>
+    </a>
+    <a href="#unit5" class="legend-item" style="border-color:var(--u5)">
+      <div class="legend-dot" style="background:var(--u5)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--u5)">Unit 5 — Political Participation</div>
+        <div class="legend-desc">Voting, parties, interest groups, media, campaigns, elections</div>
+        <div class="legend-pages">Topics: ~12 key concepts</div>
+      </div>
+    </a>
+    <a href="#docs" class="legend-item" style="border-color:var(--docs)">
+      <div class="legend-dot" style="background:var(--docs)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--docs)">9 Required Foundational Documents</div>
+        <div class="legend-desc">Every required doc with author, argument, significance, & exam angle</div>
+        <div class="legend-pages">Brutus No. 1, Fed 10, 51, 70, 78, Declaration, Const., MLK Letter, AOC</div>
+      </div>
+    </a>
+    <a href="#cases" class="legend-item" style="border-color:var(--cases)">
+      <div class="legend-dot" style="background:var(--cases)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--cases)">15 Required Supreme Court Cases</div>
+        <div class="legend-desc">Issue, ruling, reasoning, exam connection for every required case</div>
+        <div class="legend-pages">Marbury through Engel v. Vitale and beyond</div>
+      </div>
+    </a>
+    <a href="#frq" class="legend-item" style="border-color:var(--frq)">
+      <div class="legend-dot" style="background:var(--frq)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--frq)">FRQ Mastery Guide</div>
+        <div class="legend-desc">All 4 FRQ types, step-by-step strategies, sample prompts, model answers</div>
+        <div class="legend-pages">Concept App · Quantitative · SCOTUS Comparison · Argument Essay</div>
+      </div>
+    </a>
+    <a href="#mcq" class="legend-item" style="border-color:var(--u4)">
+      <div class="legend-dot" style="background:var(--u4)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--u4)">Example MCQ with Explanations</div>
+        <div class="legend-desc">Stimulus-based and direct questions across all units with answer keys</div>
+        <div class="legend-pages">10 example questions fully explained</div>
+      </div>
+    </a>
+    <a href="#tips" class="legend-item" style="border-color:var(--tips)">
+      <div class="legend-dot" style="background:var(--tips)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--tips)">Exam Tips, Tricks &amp; Strategy</div>
+        <div class="legend-desc">Time management, trap answer strategies, FRQ hacks, the night before</div>
+        <div class="legend-pages">20+ actionable strategies</div>
+      </div>
+    </a>
+    <a href="#vocab" class="legend-item" style="border-color:var(--u2)">
+      <div class="legend-dot" style="background:var(--u2)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--u2)">Power Vocabulary Reference</div>
+        <div class="legend-desc">Must-know terms for every unit — the words the AP exam loves to use</div>
+        <div class="legend-pages">60+ essential terms defined</div>
+      </div>
+    </a>
+    <a href="#compare" class="legend-item" style="border-color:var(--u1)">
+      <div class="legend-dot" style="background:var(--u1)"></div>
+      <div>
+        <div class="legend-label" style="color:var(--u1)">Comparison Charts</div>
+        <div class="legend-desc">Federalists vs. Anti-Federalists · Senate vs. House · Liberal vs. Conservative</div>
+        <div class="legend-pages">Quick-reference for side-by-side topics</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════ UNIT 1 ═══════════════════ -->
+<div class="section" id="unit1">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--u1)">01</div>
+    <div>
+      <div class="section-title" style="color:var(--u1)">Foundations of American Democracy</div>
+      <div style="font-size:13px;color:var(--muted)">~15–22% of exam · Big ideas: Constitutionalism, Liberty &amp; Order, Civic Participation</div>
+    </div>
+    <div class="section-tag" style="color:var(--u1);border-color:var(--u1);background:var(--u1-dim)">UNIT 1</div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card" style="border-top:3px solid var(--u1)">
+      <div class="card-title" style="color:var(--u1)">🏛 Enlightenment Influences</div>
+      <ul>
+        <li><strong>John Locke:</strong> Natural rights (life, liberty, property), social contract, consent of governed — directly shaped Declaration of Independence</li>
+        <li><strong>Montesquieu:</strong> Separation of powers into 3 branches — inspired the Constitution's structure</li>
+        <li><strong>Rousseau:</strong> Popular sovereignty — government derives legitimacy from the people</li>
+        <li><strong>Hobbes:</strong> Without gov't, life is "nasty, brutish, short" — justifies strong central authority</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u1)">
+      <div class="card-title" style="color:var(--u1)">📜 Articles of Confederation (1781)</div>
+      <ul>
+        <li><strong>Weaknesses:</strong> No power to tax, no executive, no federal courts, no regulation of commerce</li>
+        <li><strong>Each state had 1 vote</strong> regardless of population</li>
+        <li><strong>9/13 states needed</strong> to pass legislation; 13/13 to amend</li>
+        <li><strong>Shays' Rebellion (1786):</strong> Armed uprising of farmers → revealed weakness → motivated Constitutional Convention</li>
+        <li>Led directly to the Constitutional Convention of 1787</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u1)">
+      <div class="card-title" style="color:var(--u1)">⚖️ Constitutional Compromises</div>
+      <ul>
+        <li><strong>Great Compromise:</strong> Bicameral legislature — Senate (equal rep) + House (proportional)</li>
+        <li><strong>3/5 Compromise:</strong> Enslaved people counted as 3/5 of a person for rep &amp; taxation</li>
+        <li><strong>Electoral College:</strong> Indirect election of president — compromise between Congress choice and popular vote</li>
+        <li><strong>Commerce Clause:</strong> Congress regulates interstate commerce</li>
+        <li><strong>Slave Trade Compromise:</strong> No ban on slave trade until 1808</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u1)">
+      <div class="card-title" style="color:var(--u1)">🗺 Federalism Models</div>
+      <ul>
+        <li><strong>Dual Federalism (layer cake):</strong> Clear separation of national &amp; state powers — 1789–1930s</li>
+        <li><strong>Cooperative Federalism (marble cake):</strong> Shared powers, grants-in-aid — New Deal onward</li>
+        <li><strong>New Federalism:</strong> Devolution — Reagan era, returning power to states</li>
+        <li><strong>Categorical grants:</strong> Federal $$ for specific purpose with strings</li>
+        <li><strong>Block grants:</strong> More flexibility for states, fewer strings</li>
+        <li><strong>Unfunded mandates:</strong> Federal requirements without funding</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u1)">
+      <div class="card-title" style="color:var(--u1)">📋 Constitutional Principles (7 Pillars)</div>
+      <ul>
+        <li><strong>Popular sovereignty</strong> — power from the people</li>
+        <li><strong>Republicanism</strong> — elected representatives govern</li>
+        <li><strong>Federalism</strong> — divided national/state power</li>
+        <li><strong>Separation of powers</strong> — 3 distinct branches</li>
+        <li><strong>Checks &amp; balances</strong> — each branch limits others</li>
+        <li><strong>Judicial review</strong> — courts can strike down unconstitutional laws (Marbury)</li>
+        <li><strong>Limited government</strong> — government power is restricted</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u1)">
+      <div class="card-title" style="color:var(--u1)">🔄 Democracy Models</div>
+      <ul>
+        <li><strong>Pluralist:</strong> Many competing groups balance power — no single group dominates</li>
+        <li><strong>Elite/Class:</strong> Small wealthy elite holds disproportionate power</li>
+        <li><strong>Participatory:</strong> Maximum direct citizen involvement (e.g., ballot initiatives)</li>
+        <li><strong>Hyperpluralism:</strong> Too many groups — gridlock, no one wins</li>
+        <li><strong>Polyarchy:</strong> Dahl — democracy = rule by competing elites with public input</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u1)">
+      <div class="card-title" style="color:var(--u1)">🔑 Constitutional Powers</div>
+      <ul>
+        <li><strong>Enumerated (express) powers:</strong> Specifically listed in Article I §8</li>
+        <li><strong>Implied powers:</strong> Necessary &amp; Proper Clause ("elastic clause") — McCulloch v. Maryland</li>
+        <li><strong>Reserved powers (10th Amend.):</strong> Powers not given to feds → states</li>
+        <li><strong>Concurrent powers:</strong> Shared — taxing, borrowing, courts</li>
+        <li><strong>Prohibited powers:</strong> Neither level can do (e.g., titles of nobility)</li>
+        <li><strong>Supremacy Clause (Art. VI):</strong> Federal law > state law</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u1)">
+      <div class="card-title" style="color:var(--u1)">📝 Amendment Process</div>
+      <ul>
+        <li><strong>Proposal:</strong> 2/3 of both houses OR constitutional convention called by 2/3 of states</li>
+        <li><strong>Ratification:</strong> 3/4 of state legislatures OR 3/4 of state ratifying conventions</li>
+        <li>Only 27 amendments in 230+ years → intentionally difficult</li>
+        <li>First 10 = Bill of Rights, added 1791 to gain Anti-Federalist support</li>
+        <li><strong>Key amendments:</strong> 14th (equal protection), 17th (direct Senate election), 22nd (2-term limit), 25th (presidential succession)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accent-box" style="background:var(--u1-dim);border-color:var(--u1)">
+    <div class="box-title" style="color:var(--u1)">⭐ HIGH-YIELD: Federalist vs. Anti-Federalist Debate</div>
+    <p>This is <strong>constantly on the exam</strong>. Federalists (Hamilton, Madison, Jay) argued for a strong central government — wrote The Federalist Papers. Anti-Federalists (Brutus, Patrick Henry) feared tyranny, demanded a Bill of Rights. The tension between these views runs through the ENTIRE course.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ UNIT 2 ═══════════════════ -->
+<div class="section" id="unit2">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--u2)">02</div>
+    <div>
+      <div class="section-title" style="color:var(--u2)">Interactions Among Branches of Government</div>
+      <div style="font-size:13px;color:var(--muted)">~25–36% of exam · LARGEST UNIT · Congress, President, Courts, Bureaucracy</div>
+    </div>
+    <div class="section-tag" style="color:var(--u2);border-color:var(--u2);background:var(--u2-dim)">UNIT 2</div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card" style="border-top:3px solid var(--u2)">
+      <div class="card-title" style="color:var(--u2)">🏛 Congress: Structure</div>
+      <ul>
+        <li><strong>Bicameral:</strong> House (435) + Senate (100)</li>
+        <li><strong>House:</strong> 2-yr terms, originates revenue bills, impeaches, Rules Committee controls floor</li>
+        <li><strong>Senate:</strong> 6-yr terms, advise &amp; consent (treaties/nominations), tries impeachments, filibuster</li>
+        <li><strong>Reapportionment:</strong> House seats reallocated after each census (every 10 yrs)</li>
+        <li><strong>Redistricting:</strong> States redraw district lines — can lead to gerrymandering</li>
+        <li><strong>Majority/Minority leaders, Whips, Speaker</strong> of the House = most powerful</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u2)">
+      <div class="card-title" style="color:var(--u2)">📋 How a Bill Becomes a Law</div>
+      <ul>
+        <li>Introduced → Committee (markup, hearing) → Rules Committee (House) → Floor vote</li>
+        <li>If different versions: <strong>Conference Committee</strong> reconciles</li>
+        <li>Both chambers pass identical bill → President signs or vetoes</li>
+        <li><strong>Override:</strong> 2/3 of both chambers → becomes law without President</li>
+        <li><strong>Pocket veto:</strong> Congress adjourns within 10 days of receiving bill → dies without signature</li>
+        <li><strong>Filibuster:</strong> Senate delay tactic; ends with cloture (60 votes)</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u2)">
+      <div class="card-title" style="color:var(--u2)">🦅 Presidential Powers</div>
+      <ul>
+        <li><strong>Constitutional (formal):</strong> Veto, Commander-in-Chief, appoint judges/cabinet, grant pardons, negotiate treaties, State of the Union</li>
+        <li><strong>Informal:</strong> Bully pulpit, executive orders, executive agreements, signing statements</li>
+        <li><strong>War Powers Act (1973):</strong> President must notify Congress within 48 hrs of troops; 60-day limit without authorization</li>
+        <li><strong>22nd Amendment:</strong> 2-term limit</li>
+        <li><strong>Impeachment:</strong> House impeaches, Senate convicts (2/3)</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u2)">
+      <div class="card-title" style="color:var(--u2)">⚖️ Federal Judiciary</div>
+      <ul>
+        <li><strong>Constitutional courts:</strong> District → Circuit Courts of Appeal → Supreme Court</li>
+        <li><strong>SCOTUS:</strong> 9 justices, lifetime appointments, discretionary docket</li>
+        <li><strong>Certiorari (cert):</strong> SCOTUS chooses to hear ~1% of petitions; needs 4 votes (Rule of 4)</li>
+        <li><strong>Judicial review:</strong> Power to strike down unconstitutional laws (Marbury v. Madison)</li>
+        <li><strong>Stare decisis:</strong> Precedent — follow past decisions</li>
+        <li><strong>Judicial activism vs. restraint</strong></li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u2)">
+      <div class="card-title" style="color:var(--u2)">🏢 Federal Bureaucracy</div>
+      <ul>
+        <li><strong>15 Cabinet departments</strong> — headed by Secretaries (except DOJ → Attorney General)</li>
+        <li><strong>Independent agencies:</strong> EPA, FEC, FCC, NASA — insulated from politics</li>
+        <li><strong>Iron triangle:</strong> Bureaucratic agency + Congressional committee + interest group — mutually beneficial</li>
+        <li><strong>Issue networks:</strong> Looser, broader coalitions around policy areas</li>
+        <li><strong>Merit system (Pendleton Act 1883):</strong> Replaced spoils system with civil service exams</li>
+        <li><strong>Discretionary authority:</strong> Bureaucrats interpret vague laws</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u2)">
+      <div class="card-title" style="color:var(--u2)">🔍 Congressional Oversight</div>
+      <ul>
+        <li><strong>Hearings &amp; investigations</strong> — question executive branch officials</li>
+        <li><strong>Confirmation power</strong> — Senate approves nominations</li>
+        <li><strong>Power of the purse</strong> — Congress controls appropriations</li>
+        <li><strong>Impeachment</strong> — ultimate check on executive/judiciary</li>
+        <li><strong>CBO:</strong> Congressional Budget Office — nonpartisan economic analysis</li>
+        <li><strong>GAO:</strong> Government Accountability Office — audits executive agencies</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u2)">
+      <div class="card-title" style="color:var(--u2)">🌐 Foreign Policy Tools</div>
+      <ul>
+        <li><strong>Treaties</strong> — President negotiates, Senate ratifies (2/3)</li>
+        <li><strong>Executive agreements</strong> — President alone, no Senate needed</li>
+        <li><strong>Economic sanctions</strong></li>
+        <li><strong>Foreign aid</strong></li>
+        <li><strong>Military force</strong> — War Powers Act applies</li>
+        <li><strong>Isolationism vs. Interventionism</strong> — longstanding tension</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u2)">
+      <div class="card-title" style="color:var(--u2)">⚡ Linkage Institutions</div>
+      <ul>
+        <li><strong>Political parties</strong> — organize elections, shape policy agendas</li>
+        <li><strong>Elections</strong> — primary mechanism of accountability</li>
+        <li><strong>Interest groups</strong> — represent specific constituencies to government</li>
+        <li><strong>Media</strong> — sets agenda, frames issues, holds government accountable</li>
+        <li>These connect public opinion to government action — critical for Unit 5 overlap</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accent-box" style="background:var(--u2-dim);border-color:var(--u2)">
+    <div class="box-title" style="color:var(--u2)">⭐ HIGH-YIELD: Checks &amp; Balances Quick Reference</div>
+    <p><strong>Congress checks President:</strong> Override veto (2/3), declare war, confirm nominations, control budget, impeach &amp; remove. | <strong>President checks Congress:</strong> Veto, recommend legislation, call special sessions. | <strong>Congress checks Courts:</strong> Confirm justices, create/abolish lower courts, amend Constitution, impeach judges. | <strong>President checks Courts:</strong> Nominate justices. | <strong>Courts check Congress &amp; President:</strong> Judicial review (Marbury).</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ UNIT 3 ═══════════════════ -->
+<div class="section" id="unit3">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--u3)">03</div>
+    <div>
+      <div class="section-title" style="color:var(--u3)">Civil Liberties &amp; Civil Rights</div>
+      <div style="font-size:13px;color:var(--muted)">~13–18% of exam · Bill of Rights, 14th Amendment, Equal Protection, Due Process</div>
+    </div>
+    <div class="section-tag" style="color:var(--u3);border-color:var(--u3);background:var(--u3-dim)">UNIT 3</div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card" style="border-top:3px solid var(--u3)">
+      <div class="card-title" style="color:var(--u3)">📋 Bill of Rights Overview</div>
+      <ul>
+        <li><strong>1st:</strong> RAPPS — Religion (Establishment + Free Exercise), Assembly, Press, Petition, Speech</li>
+        <li><strong>2nd:</strong> Right to bear arms (DC v. Heller — individual right)</li>
+        <li><strong>3rd:</strong> No quartering soldiers in homes</li>
+        <li><strong>4th:</strong> No unreasonable searches; warrant requires probable cause</li>
+        <li><strong>5th:</strong> Grand jury, no double jeopardy, self-incrimination, due process, takings</li>
+        <li><strong>6th:</strong> Speedy &amp; public trial, jury, confront witnesses, counsel</li>
+        <li><strong>7th:</strong> Jury in civil cases</li>
+        <li><strong>8th:</strong> No cruel &amp; unusual punishment, excessive bail</li>
+        <li><strong>9th:</strong> Rights not listed are still retained by people</li>
+        <li><strong>10th:</strong> Powers not delegated → states or people</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u3)">
+      <div class="card-title" style="color:var(--u3)">🔗 Selective Incorporation</div>
+      <ul>
+        <li>Bill of Rights originally only protected against federal government</li>
+        <li><strong>14th Amendment (1868):</strong> Due process clause used to apply rights to states</li>
+        <li><strong>Barron v. Baltimore (1833):</strong> BoR doesn't apply to states</li>
+        <li><strong>Gitlow v. NY (1925):</strong> First case applying BoR to states via 14th</li>
+        <li>Incorporation is <em>selective</em> — case by case, not all at once</li>
+        <li><strong>McDonald v. Chicago (2010):</strong> 2nd Amend. incorporated to states</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u3)">
+      <div class="card-title" style="color:var(--u3)">🗣 1st Amendment: Free Speech</div>
+      <ul>
+        <li><strong>Protected:</strong> Political speech, symbolic speech, offensive speech (Snyder v. Phelps)</li>
+        <li><strong>Less protected:</strong> Commercial speech, obscenity, "fighting words" (Chaplinsky)</li>
+        <li><strong>Clear &amp; present danger test:</strong> Schenck v. US — government can limit speech creating imminent danger</li>
+        <li><strong>Tinker v. Des Moines:</strong> Students don't shed rights at schoolhouse gate</li>
+        <li><strong>NY Times v. US:</strong> No prior restraint (Pentagon Papers)</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u3)">
+      <div class="card-title" style="color:var(--u3)">⛪ 1st Amendment: Religion</div>
+      <ul>
+        <li><strong>Establishment Clause:</strong> No state religion — Lemon test (secular purpose, neither advances nor inhibits religion, no entanglement)</li>
+        <li><strong>Free Exercise Clause:</strong> Government cannot prohibit religious practice</li>
+        <li><strong>Engel v. Vitale:</strong> School-sponsored prayer unconstitutional</li>
+        <li><strong>Wisconsin v. Yoder:</strong> Amish parents don't have to send kids to high school</li>
+        <li><strong>Tension:</strong> Establishment vs. Free Exercise — never fully resolved</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u3)">
+      <div class="card-title" style="color:var(--u3)">⚖️ Equal Protection</div>
+      <ul>
+        <li><strong>14th Amendment §1:</strong> No state shall deny equal protection of the laws</li>
+        <li><strong>Rational basis test:</strong> Law must be rationally related to legitimate gov't interest (default)</li>
+        <li><strong>Intermediate scrutiny:</strong> Gender classifications — must be substantially related to important gov't interest</li>
+        <li><strong>Strict scrutiny:</strong> Race, national origin, religion — must be narrowly tailored to compelling interest</li>
+        <li><strong>Plessy v. Ferguson (1896):</strong> "Separate but equal" allowed</li>
+        <li><strong>Brown v. Board (1954):</strong> Separate is inherently unequal → overturned Plessy</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u3)">
+      <div class="card-title" style="color:var(--u3)">🔐 Due Process</div>
+      <ul>
+        <li><strong>Procedural due process:</strong> Government must follow fair procedures</li>
+        <li><strong>Substantive due process:</strong> Some liberties so fundamental that gov't cannot infringe them (right to privacy)</li>
+        <li><strong>Miranda v. Arizona:</strong> Police must read rights before custodial interrogation</li>
+        <li><strong>Mapp v. Ohio:</strong> Exclusionary rule — illegally seized evidence inadmissible</li>
+        <li><strong>Gideon v. Wainwright:</strong> Right to counsel in felony cases (6th Amend. incorporated)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accent-box" style="background:var(--u3-dim);border-color:var(--u3)">
+    <div class="box-title" style="color:var(--u3)">🔑 Civil Liberties vs. Civil Rights — Know the Difference!</div>
+    <p><strong>Civil liberties</strong> = protections FROM government (1st Amend. rights, due process) — the government cannot take these away. <strong>Civil rights</strong> = protections OF citizens against discrimination BY government OR others — government must take action to protect these (Civil Rights Act, Voting Rights Act, 14th Amendment equal protection). AP exam LOVES to test this distinction.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ UNIT 4 ═══════════════════ -->
+<div class="section" id="unit4">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--u4)">04</div>
+    <div>
+      <div class="section-title" style="color:var(--u4)">American Political Ideologies &amp; Beliefs</div>
+      <div style="font-size:13px;color:var(--muted)">~10–15% of exam · Public opinion, socialization, ideology, polling</div>
+    </div>
+    <div class="section-tag" style="color:var(--u4);border-color:var(--u4);background:var(--u4-dim)">UNIT 4</div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card" style="border-top:3px solid var(--u4)">
+      <div class="card-title" style="color:var(--u4)">🧠 Political Socialization</div>
+      <ul>
+        <li><strong>Family:</strong> Strongest influence — party ID often follows parents</li>
+        <li><strong>School:</strong> Civic education, pledging allegiance</li>
+        <li><strong>Peers:</strong> Especially influential in adolescence</li>
+        <li><strong>Media:</strong> Agenda-setting, framing effects</li>
+        <li><strong>Religion:</strong> Shapes values on social issues</li>
+        <li><strong>Major events:</strong> Wars, economic crises → shift generations (e.g., Great Depression → New Deal coalition)</li>
+        <li><strong>Geographic region:</strong> Urban vs. rural, South vs. Northeast</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u4)">
+      <div class="card-title" style="color:var(--u4)">🎯 Ideology Spectrum</div>
+      <ul>
+        <li><strong>Liberal/Progressive:</strong> More gov't, strong social safety net, permissive on social issues, activist foreign policy</li>
+        <li><strong>Conservative:</strong> Less gov't, free market, traditional values, strong defense</li>
+        <li><strong>Moderate:</strong> Mix of both — largest single group</li>
+        <li><strong>Libertarian:</strong> Less gov't in economic AND social issues</li>
+        <li><strong>Communitarian:</strong> More gov't in both areas</li>
+        <li>Most Americans are NOT ideologically consistent — "operational liberalism" but "symbolic conservatism"</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u4)">
+      <div class="card-title" style="color:var(--u4)">📊 Public Opinion &amp; Polling</div>
+      <ul>
+        <li><strong>Random sampling:</strong> Every person has equal chance of being selected — ensures representativeness</li>
+        <li><strong>Margin of error:</strong> ±3% typical — results within this range are statistically tied</li>
+        <li><strong>Push polling:</strong> Leading questions designed to influence, not measure, opinion — unethical</li>
+        <li><strong>Question order effects:</strong> Earlier questions prime later responses</li>
+        <li><strong>Bandwagon effect:</strong> People support whoever appears to be winning</li>
+        <li><strong>Bradley effect:</strong> Respondents may not report true preferences on sensitive topics</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u4)">
+      <div class="card-title" style="color:var(--u4)">📰 Media's Role</div>
+      <ul>
+        <li><strong>Agenda-setting:</strong> Media doesn't tell you WHAT to think, but WHAT to think about</li>
+        <li><strong>Framing:</strong> How an issue is presented shapes how audience responds</li>
+        <li><strong>Priming:</strong> Media emphasis on certain issues influences how voters evaluate politicians</li>
+        <li><strong>Gatekeeping:</strong> Editorial decisions about what gets covered</li>
+        <li><strong>Media consolidation:</strong> Fewer corporations own more outlets</li>
+        <li><strong>New media:</strong> Social media → echo chambers, reduced gatekeeping</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u4)">
+      <div class="card-title" style="color:var(--u4)">🔢 Demographic Cleavages</div>
+      <ul>
+        <li><strong>Gender gap:</strong> Women trend more Democratic, men more Republican</li>
+        <li><strong>Race:</strong> African Americans strongly Democratic; Latino and Asian American vote more varied</li>
+        <li><strong>Age:</strong> Younger → more liberal; older → more conservative (though not absolute)</li>
+        <li><strong>Education:</strong> College-educated increasingly Democratic; non-college more Republican</li>
+        <li><strong>Religion:</strong> Evangelical Christians → Republican; Jewish, secular → Democratic</li>
+        <li><strong>Income:</strong> High income → more Republican (fiscal); but high-education high-income → mixed</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ UNIT 5 ═══════════════════ -->
+<div class="section" id="unit5">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--u5)">05</div>
+    <div>
+      <div class="section-title" style="color:var(--u5)">Political Participation</div>
+      <div style="font-size:13px;color:var(--muted)">~20–27% of exam · Voting, parties, interest groups, elections, media</div>
+    </div>
+    <div class="section-tag" style="color:var(--u5);border-color:var(--u5);background:var(--u5-dim)">UNIT 5</div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card" style="border-top:3px solid var(--u5)">
+      <div class="card-title" style="color:var(--u5)">🗳 Voting &amp; Voter Behavior</div>
+      <ul>
+        <li><strong>Rational-choice theory:</strong> People vote when benefits &gt; costs</li>
+        <li><strong>Party identification:</strong> Strongest predictor of vote choice</li>
+        <li><strong>Retrospective voting:</strong> Reward/punish incumbents based on past performance</li>
+        <li><strong>Prospective voting:</strong> Choose candidate based on future promises</li>
+        <li><strong>Factors increasing turnout:</strong> High education, older age, strong party ID, competitive elections, high income</li>
+        <li><strong>Motor Voter Act (1993):</strong> Register when getting driver's license</li>
+        <li><strong>Voting Rights Act (1965):</strong> Banned literacy tests, federal oversight of elections</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u5)">
+      <div class="card-title" style="color:var(--u5)">🐘🐴 Political Parties</div>
+      <ul>
+        <li><strong>Functions:</strong> Recruit candidates, organize elections, simplify voter choices, govern</li>
+        <li><strong>Two-party system:</strong> Caused by plurality voting (winner-take-all)</li>
+        <li><strong>Duverger's Law:</strong> Plurality elections → two-party system</li>
+        <li><strong>Party realignment:</strong> Major shift in party coalitions — 1932 (New Deal), 1968 (Southern Strategy)</li>
+        <li><strong>Dealignment:</strong> Weakening party identification — more independents</li>
+        <li><strong>Third parties:</strong> Face structural barriers — ballot access, debates, Electoral College</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u5)">
+      <div class="card-title" style="color:var(--u5)">💰 Campaign Finance</div>
+      <ul>
+        <li><strong>FEC:</strong> Federal Election Commission — regulates federal campaign finance</li>
+        <li><strong>Hard money:</strong> Direct contributions to candidates — limited and disclosed</li>
+        <li><strong>Soft money:</strong> To parties for "party building" — originally unlimited</li>
+        <li><strong>McCain-Feingold (BCRA 2002):</strong> Banned soft money to national parties</li>
+        <li><strong>Citizens United v. FEC (2010):</strong> Corporations/unions have free speech rights; can spend unlimited in elections</li>
+        <li><strong>PACs &amp; Super PACs:</strong> Super PACs can raise/spend unlimited — cannot coordinate with candidate</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u5)">
+      <div class="card-title" style="color:var(--u5)">📢 Interest Groups</div>
+      <ul>
+        <li><strong>Functions:</strong> Inform members, lobby government, litigate, educate public, monitor policy</li>
+        <li><strong>Lobbying:</strong> Direct contact with legislators/staff to influence policy</li>
+        <li><strong>Amicus curiae briefs:</strong> Interest groups file "friend of the court" briefs in court cases</li>
+        <li><strong>Collective action problem:</strong> Why join if you get benefits anyway? → free rider problem</li>
+        <li><strong>Olson's Logic:</strong> Small, well-funded groups more effective than large diffuse ones</li>
+        <li><strong>AARP, NRA, AFL-CIO, Chamber of Commerce</strong> = most powerful</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u5)">
+      <div class="card-title" style="color:var(--u5)">🗺 Electoral College</div>
+      <ul>
+        <li>538 total electors; <strong>270 needed to win</strong></li>
+        <li>Each state = # House seats + 2 senators; DC gets 3 (23rd Amend.)</li>
+        <li><strong>Winner-take-all</strong> in 48 states (Maine &amp; Nebraska split by district)</li>
+        <li>Criticism: Can win popular vote, lose election (2000, 2016)</li>
+        <li>Defense: Federalism, protects small states, clear winner</li>
+        <li>If no majority → <strong>House decides</strong> president (each state delegation = 1 vote)</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--u5)">
+      <div class="card-title" style="color:var(--u5)">🏁 Election Types</div>
+      <ul>
+        <li><strong>Primary elections:</strong> Choose party nominee — closed (party only) vs. open (any voter)</li>
+        <li><strong>General elections:</strong> Between party nominees</li>
+        <li><strong>Midterm elections:</strong> Non-presidential year — President's party typically loses seats</li>
+        <li><strong>Presidential primary vs. caucus:</strong> Caucus = public meeting &amp; discussion</li>
+        <li><strong>Incumbency advantage:</strong> Name recognition, franking privilege, gerrymandering</li>
+        <li><strong>Coattail effect:</strong> Popular president helps downballot candidates</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ FOUNDATIONAL DOCS ═══════════════════ -->
+<div class="section" id="docs">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--docs)">📜</div>
+    <div>
+      <div class="section-title" style="color:var(--docs)">9 Required Foundational Documents</div>
+      <div style="font-size:13px;color:var(--muted)">These WILL appear on your exam. Know the argument, the author, and the connection to course concepts.</div>
+    </div>
+    <div class="section-tag" style="color:var(--docs);border-color:var(--docs);background:var(--docs-dim)">REQUIRED</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-name">1. The Declaration of Independence (1776)</div>
+    <div class="doc-meta">Author: Thomas Jefferson (primary) | Purpose: Justify separation from Britain</div>
+    <div class="doc-body">Draws on <strong>Locke's natural rights theory</strong> — life, liberty, and pursuit of happiness (Locke said "property"). Establishes <strong>social contract theory</strong>: government derives just powers from <strong>consent of the governed</strong>. If government violates this contract, people have right to <strong>alter or abolish</strong> it. Lists 27 grievances against King George. <strong>Exam angle:</strong> Compare to Federalist 51 (government limiting itself); note tension between ideals ("all men created equal") and reality (slavery).</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-name">2. The Articles of Confederation (1781)</div>
+    <div class="doc-meta">Author: Second Continental Congress | Purpose: First governing document of US</div>
+    <div class="doc-body">Created a <strong>confederation</strong> — loose alliance of sovereign states with weak central government. <strong>No power to tax</strong> directly, no executive, no national courts. Each state had <strong>one vote</strong> regardless of size. Required <strong>unanimous consent</strong> to amend. Weaknesses led to Shays' Rebellion and the Constitutional Convention. <strong>Exam angle:</strong> Anti-Federalists wanted something like this. Contrast with Constitution's stronger central government.</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-name">3. Federalist No. 10 (1787)</div>
+    <div class="doc-meta">Author: James Madison | Purpose: Argue large republic controls factions</div>
+    <div class="doc-body">A <strong>faction</strong> = group of citizens united by a common interest adverse to the rights of others or the community. Cannot eliminate factions without destroying liberty. Solution: <strong>control their effects</strong> via a large republic. In a large republic, more factions = no single one can dominate. <strong>Representation</strong> refines public views. A large republic is BETTER than a small democracy at controlling faction. <strong>Exam angle:</strong> Pluralism; anti-direct democracy; compare to Brutus No. 1 which says large republic leads to tyranny.</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-name">4. Brutus No. 1 (1787)</div>
+    <div class="doc-meta">Author: Robert Yates (pseudonym "Brutus") | Purpose: Argue against ratifying Constitution</div>
+    <div class="doc-body">Anti-Federalist response to Federalist Papers. Argues the <strong>Necessary &amp; Proper Clause</strong> gives Congress unlimited power. The <strong>Supremacy Clause</strong> will destroy state sovereignty. A <strong>large republic cannot represent</strong> diverse interests — representatives will become distant from constituents. Federal courts with lifetime appointments create judicial tyranny. Argues for a <strong>Bill of Rights</strong>. <strong>Exam angle:</strong> Directly contrasts Federalist 10, 51, 78. Anti-Federalists ultimately got Bill of Rights as concession.</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-name">5. Federalist No. 51 (1788)</div>
+    <div class="doc-meta">Author: James Madison | Purpose: Explain separation of powers and checks &amp; balances</div>
+    <div class="doc-body"><strong>"Ambition must be made to counteract ambition."</strong> Each branch must have constitutional means to resist others. <strong>Separation of powers</strong> — each branch chosen differently, serves different term lengths. <strong>Federalism adds another check</strong> — states check national government. Famous line: "If men were angels, no government would be necessary." Human nature requires institutional controls. <strong>Exam angle:</strong> Justifies the entire constitutional structure. FRQ favorite — cite this when analyzing checks &amp; balances.</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-name">6. Federalist No. 70 (1788)</div>
+    <div class="doc-meta">Author: Alexander Hamilton | Purpose: Argue for a single, energetic executive</div>
+    <div class="doc-body">Argues for a <strong>single president</strong> (not a multi-person executive). <strong>"Energy in the executive"</strong> is essential to good government — requires unity, duration, adequate support, and competent powers. A single executive is accountable; a plural executive diffuses responsibility and enables faction. <strong>Exam angle:</strong> Justifies presidential power; contrast with those who wanted a weak executive or congressional supremacy. Relevant to modern debates about executive power.</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-name">7. Federalist No. 78 (1788)</div>
+    <div class="doc-meta">Author: Alexander Hamilton | Purpose: Defend lifetime appointments for federal judges</div>
+    <div class="doc-body">Courts are the <strong>"least dangerous branch"</strong> — no army, no purse, only judgment. Lifetime appointments (during "good behavior") ensure <strong>judicial independence</strong> from political pressure. Establishes basis for <strong>judicial review</strong> — courts can void unconstitutional laws. Judges need expertise that only long tenure provides. <strong>Exam angle:</strong> Direct connection to Marbury v. Madison; compare to Brutus No. 1 which fears unaccountable judges. FRQ often asks to compare these two.</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-name">8. Letter from Birmingham Jail (1963)</div>
+    <div class="doc-meta">Author: Dr. Martin Luther King Jr. | Purpose: Defend civil disobedience against unjust laws</div>
+    <div class="doc-body">Written in response to white clergymen calling civil rights demonstrations "unwise and untimely." Distinguishes <strong>just laws</strong> (uplifting human personality) from <strong>unjust laws</strong> (degrading human personality). Justifies civil disobedience: one has a <strong>moral responsibility to disobey unjust laws</strong> openly, lovingly, and with willingness to accept punishment. Critiques the "white moderate" who prefers order over justice. Draws on natural law tradition going back to Augustine and Aquinas. <strong>Exam angle:</strong> Civil rights movement; connect to 14th Amendment and equal protection.</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-name">9. The Constitution of the United States (1787, amended)</div>
+    <div class="doc-meta">Author: Constitutional Convention delegates | Purpose: Supreme law of the land</div>
+    <div class="doc-body"><strong>7 Articles:</strong> I (Congress), II (Executive), III (Judiciary), IV (States), V (Amendment process), VI (Supremacy, debts), VII (Ratification). Key provisions: <strong>Commerce Clause, Necessary &amp; Proper Clause, Supremacy Clause, Full Faith &amp; Credit Clause</strong>. 27 Amendments — know: 1–10 (Bill of Rights), 13 (abolish slavery), 14 (equal protection, due process, citizenship), 15 (Black male vote), 17 (direct Senate election), 19 (women's vote), 22 (2-term limit), 24 (no poll tax), 25 (presidential succession), 26 (18-yr-old vote). <strong>Exam angle:</strong> Everything connects to the Constitution.</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ SCOTUS CASES ═══════════════════ -->
+<div class="section" id="cases">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--cases)">⚖️</div>
+    <div>
+      <div class="section-title" style="color:var(--cases)">15 Required Supreme Court Cases</div>
+      <div style="font-size:13px;color:var(--muted)">Know the issue, ruling, reasoning, and exam connection for EVERY case below.</div>
+    </div>
+    <div class="section-tag" style="color:var(--cases);border-color:var(--cases);background:var(--cases-dim)">REQUIRED</div>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-card">
+      <div class="case-name">Marbury v. Madison</div>
+      <div class="case-year">1803</div>
+      <div class="case-issue">Can SCOTUS void an act of Congress?</div>
+      <div class="case-ruling"><strong>HELD:</strong> Yes — established <strong>judicial review</strong>. Section 13 of Judiciary Act unconstitutionally expanded SCOTUS original jurisdiction. Courts have power to declare laws unconstitutional.</div>
+      <span class="case-tag">Judicial Review • Unit 2</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">McCulloch v. Maryland</div>
+      <div class="case-year">1819</div>
+      <div class="case-issue">Can Congress create a national bank? Can states tax it?</div>
+      <div class="case-ruling"><strong>HELD:</strong> Congress CAN create a bank (implied powers/elastic clause). Maryland CANNOT tax it — federal law supreme. "The power to tax is the power to destroy."</div>
+      <span class="case-tag">Federalism • Implied Powers • Unit 1</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Schenck v. United States</div>
+      <div class="case-year">1919</div>
+      <div class="case-issue">Can government limit speech during wartime?</div>
+      <div class="case-ruling"><strong>HELD:</strong> Yes — speech creating a <strong>"clear and present danger"</strong> is not protected. Distributing anti-draft leaflets during WWI not protected speech. "Shouting fire in a crowded theater" analogy.</div>
+      <span class="case-tag">1st Amendment • Free Speech • Unit 3</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Brown v. Board of Education</div>
+      <div class="case-year">1954</div>
+      <div class="case-issue">Does racial segregation in public schools violate 14th Amendment?</div>
+      <div class="case-ruling"><strong>HELD:</strong> Yes — "separate but equal" is inherently unequal. Overturned Plessy v. Ferguson (1896). Psychological harm alone violates equal protection.</div>
+      <span class="case-tag">Equal Protection • Civil Rights • Unit 3</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Engel v. Vitale</div>
+      <div class="case-year">1962</div>
+      <div class="case-issue">Can public schools sponsor prayer?</div>
+      <div class="case-ruling"><strong>HELD:</strong> No — school-sponsored prayer violates the Establishment Clause even if non-denominational and voluntary. Government cannot compose official prayers.</div>
+      <span class="case-tag">Establishment Clause • 1st Amendment • Unit 3</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Baker v. Carr</div>
+      <div class="case-year">1962</div>
+      <div class="case-issue">Can federal courts review legislative apportionment?</div>
+      <div class="case-ruling"><strong>HELD:</strong> Yes — legislative apportionment is justiciable (courts CAN review it). Led to "one person, one vote" principle. Ended rural overrepresentation in state legislatures.</div>
+      <span class="case-tag">Equal Protection • Redistricting • Unit 2</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Tinker v. Des Moines</div>
+      <div class="case-year">1969</div>
+      <div class="case-issue">Can students wear black armbands to protest Vietnam War?</div>
+      <div class="case-ruling"><strong>HELD:</strong> Yes — students do not "shed their constitutional rights at the schoolhouse gate." School can only restrict speech that causes "substantial disruption." Symbolic speech protected.</div>
+      <span class="case-tag">1st Amendment • Symbolic Speech • Unit 3</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">New York Times v. United States</div>
+      <div class="case-year">1971</div>
+      <div class="case-issue">Can the government stop NYT from publishing Pentagon Papers?</div>
+      <div class="case-ruling"><strong>HELD:</strong> No — <strong>prior restraint</strong> against publication is unconstitutional. Government must meet a very heavy burden to justify prior restraint. Press freedom paramount.</div>
+      <span class="case-tag">1st Amendment • Free Press • Unit 3</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Wisconsin v. Yoder</div>
+      <div class="case-year">1972</div>
+      <div class="case-issue">Can Amish parents refuse to send children to high school?</div>
+      <div class="case-ruling"><strong>HELD:</strong> Yes — compulsory school attendance beyond 8th grade violates Free Exercise Clause for Amish. Religious freedom outweighs state's interest in education here.</div>
+      <span class="case-tag">Free Exercise • 1st Amendment • Unit 3</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Roe v. Wade</div>
+      <div class="case-year">1973 (overturned 2022)</div>
+      <div class="case-issue">Is abortion a constitutional right?</div>
+      <div class="case-ruling"><strong>HELD (1973):</strong> Yes — right to privacy under substantive due process (14th Amend.) includes abortion. Trimester framework. <strong>OVERTURNED by Dobbs v. Jackson (2022)</strong> — no constitutional right to abortion; returned to states. Still on AP exam as required case.</div>
+      <span class="case-tag">Privacy • Due Process • Unit 3</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Shaw v. Reno</div>
+      <div class="case-year">1993</div>
+      <div class="case-issue">Can race be the predominant factor in drawing congressional districts?</div>
+      <div class="case-ruling"><strong>HELD:</strong> No — racial gerrymandering must survive strict scrutiny. Oddly shaped districts drawn predominantly on race raise equal protection concerns even if intent was to increase minority representation.</div>
+      <span class="case-tag">Equal Protection • Redistricting • Unit 2 &amp; 3</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">United States v. Lopez</div>
+      <div class="case-year">1995</div>
+      <div class="case-issue">Does Congress have power to ban guns near schools via Commerce Clause?</div>
+      <div class="case-ruling"><strong>HELD:</strong> No — Gun-Free School Zones Act exceeds Commerce Clause power. Possessing a gun near school is not "economic activity" substantially affecting interstate commerce. First Commerce Clause limit since New Deal.</div>
+      <span class="case-tag">Federalism • Commerce Clause • Unit 1</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">McDonald v. City of Chicago</div>
+      <div class="case-year">2010</div>
+      <div class="case-issue">Does 2nd Amendment apply to states?</div>
+      <div class="case-ruling"><strong>HELD:</strong> Yes — 2nd Amendment incorporated to states via 14th Amendment. Chicago's handgun ban unconstitutional. Extended DC v. Heller (2008) individual right to all states.</div>
+      <span class="case-tag">2nd Amendment • Incorporation • Unit 3</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Citizens United v. FEC</div>
+      <div class="case-year">2010</div>
+      <div class="case-issue">Can government limit political spending by corporations?</div>
+      <div class="case-ruling"><strong>HELD:</strong> No — corporations and unions have 1st Amendment free speech rights. Cannot limit independent expenditures in campaigns. Led to Super PACs. Very controversial.</div>
+      <span class="case-tag">1st Amendment • Campaign Finance • Unit 5</span>
+    </div>
+    <div class="case-card">
+      <div class="case-name">Mapp v. Ohio</div>
+      <div class="case-year">1961</div>
+      <div class="case-issue">Does the exclusionary rule apply to states?</div>
+      <div class="case-ruling"><strong>HELD:</strong> Yes — evidence seized in violation of 4th Amendment is inadmissible in state AND federal courts. <strong>Exclusionary rule</strong> incorporated to states via 14th Amendment due process clause.</div>
+      <span class="case-tag">4th Amendment • Exclusionary Rule • Unit 3</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ FRQ ═══════════════════ -->
+<div class="section" id="frq">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--frq)">✍️</div>
+    <div>
+      <div class="section-title" style="color:var(--frq)">FRQ Mastery Guide</div>
+      <div style="font-size:13px;color:var(--muted)">4 FRQ types · 100 minutes · ~50% of your exam score — master this section</div>
+    </div>
+    <div class="section-tag" style="color:var(--frq);border-color:var(--frq);background:var(--frq-dim)">FRQ</div>
+  </div>
+
+  <div class="accent-box" style="background:var(--frq-dim);border-color:var(--frq);margin-bottom:28px">
+    <div class="box-title" style="color:var(--frq)">⏱ FRQ TIME STRATEGY</div>
+    <p>You have <strong>100 minutes</strong> for 4 FRQs. Suggested time: <strong>FRQ 1 (Concept App): 20 min | FRQ 2 (Quant): 20 min | FRQ 3 (SCOTUS Comparison): 20 min | FRQ 4 (Argument Essay): 40 min</strong>. The Argument Essay is worth the most — never run short on time for it. If stuck on one part, skip and return.</p>
+  </div>
+
+  <!-- FRQ Type 1 -->
+  <div class="frq-type">
+    <div class="frq-type-header">
+      <div class="frq-num">FRQ<br>1</div>
+      <div>
+        <div class="frq-name">Concept Application</div>
+        <div class="frq-pts">3 points total · ~20 minutes · No stimulus required</div>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:var(--muted);margin-bottom:16px">Presents a real-world political scenario. You must apply course concepts to explain the scenario. Usually 3 tasks: describe/explain a concept, explain how it applies to the scenario, explain a cause or effect.</p>
+    <ul class="step-list">
+      <li><div class="step-num">1</div><div><strong>Read the scenario twice.</strong> Identify the key political actors, actions, and context. Underline key terms.</div></li>
+      <li><div class="step-num">2</div><div><strong>Map each task to a concept.</strong> The scenario is designed to match specific course content. Ask: which unit is this from? What principle is being tested?</div></li>
+      <li><div class="step-num">3</div><div><strong>Answer each part in a separate paragraph.</strong> Don't blend them — graders score each part separately.</div></li>
+      <li><div class="step-num">4</div><div><strong>Use the exact term from the course</strong> and define it briefly. Then connect it to the scenario with specific evidence from the scenario text.</div></li>
+      <li><div class="step-num">5</div><div><strong>Avoid mere description.</strong> You must EXPLAIN — state the relationship, not just what happened. "Because," "therefore," "this means that" are your friends.</div></li>
+    </ul>
+    <div class="accent-box" style="background:var(--bg);border-color:var(--frq);margin-top:16px;margin-bottom:0">
+      <div class="box-title" style="color:var(--frq)">📝 Sample Prompt &amp; Strategy</div>
+      <p><em>"The President used an executive order to redirect funds for border security after Congress refused to appropriate the money. Congressional leaders filed suit claiming the action violated the separation of powers."</em></p>
+      <p style="margin-top:10px"><strong>Part A:</strong> Describe ONE power Congress has to check the President → <em>Write: "Congress holds the 'power of the purse' — the exclusive constitutional authority to appropriate federal funds under Article I. When the President redirects funds without congressional approval, it challenges this power."</em></p>
+      <p style="margin-top:8px"><strong>Part B:</strong> Explain how the scenario reflects separation of powers → <em>Connect executive overreach, congressional response, and judicial remedy to the Madisonian principle from Federalist 51.</em></p>
+    </div>
+  </div>
+
+  <!-- FRQ Type 2 -->
+  <div class="frq-type">
+    <div class="frq-type-header">
+      <div class="frq-num">FRQ<br>2</div>
+      <div>
+        <div class="frq-name">Quantitative Analysis</div>
+        <div class="frq-pts">4 points total · ~20 minutes · Data stimulus required</div>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:var(--muted);margin-bottom:16px">Presents a graph, chart, map, or table. Tasks include describing data, drawing conclusions, and connecting to a broader political concept. You must actually use numbers from the data.</p>
+    <ul class="step-list">
+      <li><div class="step-num">1</div><div><strong>Examine the graphic BEFORE reading tasks.</strong> Note title, axes, legend, time range, and source. What is being measured? Are there trends?</div></li>
+      <li><div class="step-num">2</div><div><strong>For "describe" tasks:</strong> Use specific data points. "In 2020, voter turnout was X% compared to Y% in 2016, an increase of Z points." Don't just say "it went up."</div></li>
+      <li><div class="step-num">3</div><div><strong>For "draw a conclusion" tasks:</strong> Your conclusion must be SUPPORTED by the data. State the pattern, give specific numbers, then state what it means.</div></li>
+      <li><div class="step-num">4</div><div><strong>For "explain a course concept" tasks:</strong> This is where you connect data to course content — party identification, incumbency, voter suppression, etc.</div></li>
+      <li><div class="step-num">5</div><div><strong>Avoid overgeneralizing.</strong> "All Americans believe X" is never supported by a graph. Say "the data suggests" or "among the groups surveyed."</div></li>
+    </ul>
+  </div>
+
+  <!-- FRQ Type 3 -->
+  <div class="frq-type">
+    <div class="frq-type-header">
+      <div class="frq-num">FRQ<br>3</div>
+      <div>
+        <div class="frq-name">SCOTUS Comparison</div>
+        <div class="frq-pts">4 points total · ~20 minutes · Non-required case compared to required case</div>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:var(--muted);margin-bottom:16px">Gives you a NON-required Supreme Court case (one you may not know) and asks you to compare it to a required case. You don't need to know the non-required case — the information is provided. You DO need to know the required case cold.</p>
+    <ul class="step-list">
+      <li><div class="step-num">1</div><div><strong>Extract all info about the non-required case from the prompt itself.</strong> Everything you need about that case is provided. Read carefully.</div></li>
+      <li><div class="step-num">2</div><div><strong>Know your 15 required cases cold.</strong> The question will name one — you must recall the ruling, reasoning, and constitutional principle.</div></li>
+      <li><div class="step-num">3</div><div><strong>For "identify a similarity":</strong> Focus on the constitutional provision, the type of right, or the legal standard — not surface-level facts.</div></li>
+      <li><div class="step-num">4</div><div><strong>For "identify a difference":</strong> Often the OUTCOME differs, or the reasoning differs, or which branch/level of government is involved.</div></li>
+      <li><div class="step-num">5</div><div><strong>For "explain how a group could use the non-required case":</strong> Who benefits from this ruling? How could an advocacy group cite it? Think about interest groups, litigation strategy.</div></li>
+    </ul>
+    <div class="accent-box" style="background:var(--bg);border-color:var(--frq);margin-top:16px;margin-bottom:0">
+      <div class="box-title" style="color:var(--frq)">🔑 The Key Comparison Formula</div>
+      <p>Both [Case A] and [Case B] involved [constitutional provision] — BUT they differed in [key way]. In [Case A], the Court held [ruling] because [reasoning]. In [Case B], the Court held [ruling] because [reasoning]. The key distinction is [X].</p>
+    </div>
+  </div>
+
+  <!-- FRQ Type 4 -->
+  <div class="frq-type">
+    <div class="frq-type-header">
+      <div class="frq-num">FRQ<br>4</div>
+      <div>
+        <div class="frq-name">Argument Essay (DBQ-style)</div>
+        <div class="frq-pts">6 points total · ~40 minutes · Multiple sources provided</div>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:var(--muted);margin-bottom:16px">The biggest FRQ. Takes a position on a political question. Must use evidence from provided sources AND your own knowledge. Must address a counterargument. Scored on thesis, evidence, reasoning, and counterargument.</p>
+    <ul class="step-list">
+      <li><div class="step-num">1</div><div><strong>Write a defensible THESIS in the first paragraph.</strong> A thesis is NOT a restatement of the prompt. It must make a CLAIM that can be supported or refuted. Include your line of reasoning (why).</div></li>
+      <li><div class="step-num">2</div><div><strong>Use at least ONE piece of evidence from the provided sources.</strong> Quote or paraphrase + cite (e.g., "According to Document 1..."). Then EXPLAIN why it supports your argument.</div></li>
+      <li><div class="step-num">3</div><div><strong>Use at least ONE piece of evidence beyond the documents</strong> — a required case, a foundational document, a historical example, or course concept.</div></li>
+      <li><div class="step-num">4</div><div><strong>Address the counterargument.</strong> State the opposing view, explain it fairly (don't strawman), then explain why your argument is still stronger (rebuttal).</div></li>
+      <li><div class="step-num">5</div><div><strong>Demonstrate complex understanding.</strong> Earn the complexity point by: corroborating evidence, explaining a tension/paradox, comparing across time periods, or explaining multiple causes/effects.</div></li>
+    </ul>
+    <div class="accent-box" style="background:var(--bg);border-color:var(--frq);margin-top:16px;margin-bottom:0">
+      <div class="box-title" style="color:var(--frq)">✅ Thesis Formula That WORKS</div>
+      <p><strong>Weak thesis:</strong> "There are pros and cons to a strong federal government." (No claim!)</p>
+      <p style="margin-top:8px"><strong>Strong thesis:</strong> "Although a strong federal government risks concentrating power dangerously, the expansion of federal authority since the New Deal era has been essential to protecting individual rights and responding to national crises — as demonstrated by the 14th Amendment, federal civil rights legislation, and the Commerce Clause cases."</p>
+      <p style="margin-top:8px">Notice: Takes a CLEAR position + gives 2-3 specific pieces of evidence that will be developed in the essay.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ EXAMPLE MCQ ═══════════════════ -->
+<div class="section" id="mcq">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--u4)">❓</div>
+    <div>
+      <div class="section-title" style="color:var(--u4)">Example Multiple Choice Questions</div>
+      <div style="font-size:13px;color:var(--muted)">With answer keys and full explanations — practice like it's the real thing</div>
+    </div>
+    <div class="section-tag" style="color:var(--u4);border-color:var(--u4);background:var(--u4-dim)">MCQ</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 1 · UNIT 1 · Constitutional Principles</div>
+    <div class="q-text">Which of the following best represents the "necessary and proper" clause's significance to federal power?</div>
+    <ul class="q-choices">
+      <li>A. It allows states to nullify federal laws they consider unconstitutional</li>
+      <li class="correct">B. It enables Congress to enact legislation beyond its enumerated powers when needed to execute those powers</li>
+      <li>C. It requires a supermajority for Congress to pass any law affecting state sovereignty</li>
+      <li>D. It prohibits the federal government from interfering in state economic regulation</li>
+    </ul>
+    <div class="q-explain"><strong>Why B:</strong> The Necessary &amp; Proper Clause (Art. I §8) — the "elastic clause" — allows Congress to make all laws "necessary and proper" for carrying out its enumerated powers. McCulloch v. Maryland (1819) confirmed this expansive interpretation. Anti-Federalists like Brutus feared this would give Congress limitless power.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 2 · UNIT 2 · Checks &amp; Balances</div>
+    <div class="q-text">A President nominates a federal judge, but the Senate Judiciary Committee refuses to hold a hearing. This scenario BEST illustrates which constitutional principle?</div>
+    <ul class="q-choices">
+      <li>A. Federalism, because states resist federal judicial appointments</li>
+      <li>B. Separation of powers, because different branches have distinct functions</li>
+      <li class="correct">C. Checks and balances, because Congress can constrain presidential appointment power</li>
+      <li>D. Judicial review, because courts can invalidate unconstitutional laws</li>
+    </ul>
+    <div class="q-explain"><strong>Why C:</strong> The Senate's "advise and consent" power (Art. II §2) is a check on presidential appointments. Refusing a hearing prevents a presidential appointment from proceeding — this is checks and balances in action (one branch limiting another). This occurred with Merrick Garland in 2016. Separation of powers refers to distinct functions, not the system of mutual limitation.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 3 · UNIT 3 · Civil Liberties — 1st Amendment</div>
+    <div class="q-text">In Tinker v. Des Moines (1969), the Supreme Court ruled that school officials could NOT prohibit students from wearing black armbands to protest the Vietnam War. This decision MOST directly reflects which legal standard?</div>
+    <ul class="q-choices">
+      <li>A. Schools can restrict any speech that offends other students</li>
+      <li class="correct">B. Student speech can only be restricted if it causes or is likely to cause substantial disruption</li>
+      <li>C. Government employees waive their First Amendment rights while on duty</li>
+      <li>D. Symbolic speech receives no constitutional protection in public schools</li>
+    </ul>
+    <div class="q-explain"><strong>Why B:</strong> Justice Fortas's majority opinion held that schools can restrict student speech only when there is substantial disruption of the school environment. Wearing armbands was peaceful symbolic speech. The Court rejected the school's "undifferentiated fear" of disruption as insufficient. This case is crucial: it protects student speech BUT leaves room for school regulation when disruption is substantial.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 4 · UNIT 5 · Campaign Finance</div>
+    <div class="q-text">Which of the following is a consequence of the Supreme Court's ruling in Citizens United v. FEC (2010)?</div>
+    <ul class="q-choices">
+      <li>A. Corporations can make direct contributions to candidate campaigns in unlimited amounts</li>
+      <li>B. The Federal Election Commission was abolished as an unconstitutional restriction on speech</li>
+      <li class="correct">C. Corporations and unions may spend unlimited amounts on independent political expenditures</li>
+      <li>D. Campaign finance disclosure requirements were eliminated as violations of the First Amendment</li>
+    </ul>
+    <div class="q-explain"><strong>Why C:</strong> Citizens United held that restricting independent expenditures by corporations violates the First Amendment. Crucially: this applies to INDEPENDENT expenditures — spending NOT coordinated with a campaign. Direct contributions to candidates are still limited. This led to the creation of Super PACs. Answer A is wrong because direct candidate contributions remain capped; Answer D is wrong because disclosure requirements were largely upheld.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 5 · UNIT 1 · Federalism</div>
+    <div class="q-text">The BEST argument against Brutus No. 1's critique of the proposed Constitution would come from which Federalist Paper?</div>
+    <ul class="q-choices">
+      <li>A. Federalist No. 70, which argues for an energetic executive branch</li>
+      <li class="correct">B. Federalist No. 10, which argues that a large republic controls factions better than a small one</li>
+      <li>C. Federalist No. 78, which defends lifetime judicial appointments</li>
+      <li>D. Federalist No. 51, which explains checks and balances</li>
+    </ul>
+    <div class="q-explain"><strong>Why B:</strong> Brutus No. 1 argued that a large republic cannot represent diverse interests — representatives become too distant from constituents. Federalist 10 (Madison) directly rebuts this by arguing the OPPOSITE: a large republic is BETTER at controlling factions because it contains more competing groups. Fed 51 addresses checks and balances (also relevant to Brutus), but Fed 10 is the most direct counter to the large-republic argument in Brutus.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 6 · UNIT 4 · Public Opinion</div>
+    <div class="q-text">A polling firm surveys 1,000 randomly selected adults and reports that 54% support a policy, with a margin of error of ±3%. Which conclusion is BEST supported by this data?</div>
+    <ul class="q-choices">
+      <li>A. Exactly 54% of all Americans support the policy</li>
+      <li>B. A majority of Americans definitely support the policy</li>
+      <li class="correct">C. The true level of support is most likely between 51% and 57%, suggesting majority support</li>
+      <li>D. The survey is invalid because it only sampled 1,000 people</li>
+    </ul>
+    <div class="q-explain"><strong>Why C:</strong> Margin of error means the true value falls within ±3 of the reported result — so 51–57%. Since even the low end (51%) is above 50%, the data does suggest majority support. Answer A is too precise (polls estimate, not measure exactly). Answer B is wrong because "definitely" overstates certainty. Answer D is wrong — 1,000 with random sampling is standard and sufficient for national polls.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 7 · UNIT 2 · Bureaucracy</div>
+    <div class="q-text">An "iron triangle" in American politics consists of which three actors?</div>
+    <ul class="q-choices">
+      <li>A. The President, the Supreme Court, and the Senate</li>
+      <li>B. The majority party leadership, the minority party leadership, and the President</li>
+      <li class="correct">C. A congressional committee, a federal agency, and an interest group with shared policy goals</li>
+      <li>D. The Cabinet, the White House staff, and the National Security Council</li>
+    </ul>
+    <div class="q-explain"><strong>Why C:</strong> Iron triangles are mutually reinforcing relationships between: (1) a congressional committee/subcommittee that authorizes and funds programs, (2) the bureaucratic agency that implements them, and (3) interest groups that benefit. They all scratch each other's backs — agencies get funding, committees get campaign support, interest groups get favorable policy. Issue networks are broader, less tight-knit versions of this.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 8 · UNIT 3 · Equal Protection</div>
+    <div class="q-text">When a court applies "strict scrutiny" to a law, it means:</div>
+    <ul class="q-choices">
+      <li>A. The law must merely be rationally related to a legitimate government interest</li>
+      <li>B. The law affects economic regulation and receives minimal judicial scrutiny</li>
+      <li class="correct">C. The law must be narrowly tailored to achieve a compelling government interest, and the government bears the burden of proof</li>
+      <li>D. The law involves gender classification and must be substantially related to an important government interest</li>
+    </ul>
+    <div class="q-explain"><strong>Why C:</strong> Strict scrutiny is the highest level of judicial review. It applies to laws that classify by race, national origin, or religion, or infringe fundamental rights. Government must show a compelling interest AND that the law is narrowly tailored. This is very hard to survive — most laws fail. Answer A is rational basis (lowest scrutiny). Answer D describes intermediate scrutiny (gender). Answer B describes the deferential approach to economic regulation.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 9 · UNIT 5 · Political Parties</div>
+    <div class="q-text">Third parties in the United States face all of the following structural disadvantages EXCEPT:</div>
+    <ul class="q-choices">
+      <li>A. Winner-take-all plurality voting makes it nearly impossible to win seats</li>
+      <li>B. Ballot access laws in many states require expensive signature campaigns</li>
+      <li class="correct">C. The Constitution explicitly prohibits third parties from appearing on federal ballots</li>
+      <li>D. The Electoral College system rewards majority coalitions over plurality minorities</li>
+    </ul>
+    <div class="q-explain"><strong>Why C:</strong> The Constitution does NOT prohibit third parties — this is a common misconception. Third parties face structural barriers (winner-take-all elections per Duverger's Law, ballot access restrictions, exclusion from presidential debates) but face no constitutional prohibition. The two-party system is a product of structural incentives, not a constitutional mandate. This is a classic "EXCEPT" trap — watch for it on the actual exam.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-label">QUESTION 10 · UNIT 2 · Congress</div>
+    <div class="q-text">The House Rules Committee plays a uniquely powerful role in the legislative process because it:</div>
+    <ul class="q-choices">
+      <li>A. Has the power to declare legislation unconstitutional before it reaches the floor</li>
+      <li>B. Confirms all presidential appointments before they take effect</li>
+      <li class="correct">C. Controls the terms of floor debate — including time limits, amendment rules, and germaneness requirements</li>
+      <li>D. Decides which bills are sent to the Senate after passing the House</li>
+    </ul>
+    <div class="q-explain"><strong>Why C:</strong> The Rules Committee is often called the "traffic cop" of the House. It issues a "rule" for each bill specifying: how much time for debate, whether amendments are allowed (open, closed, or structured rule), and whether amendments must be germane. This gives it enormous gatekeeping power. It has no equivalent in the Senate, where debate rules are set by unanimous consent or cloture votes. This is why the Speaker of the House (who controls the Rules Committee) is so powerful.</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ TIPS & TRICKS ═══════════════════ -->
+<div class="section" id="tips">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--tips)">💡</div>
+    <div>
+      <div class="section-title" style="color:var(--tips)">Exam Tips, Tricks &amp; Strategy</div>
+      <div style="font-size:13px;color:var(--muted)">20+ actionable strategies to maximize your score on exam day</div>
+    </div>
+    <div class="section-tag" style="color:var(--tips);border-color:var(--tips);background:var(--tips-dim)">TIPS</div>
+  </div>
+
+  <div class="tip-grid">
+    <div class="tip-card">
+      <div class="tip-icon">⏱</div>
+      <div class="tip-title">MCQ Time Management</div>
+      <div class="tip-body">80 minutes, 55 questions = ~87 seconds each. Don't spend more than 90 seconds on any single question. Flag and return. Your instinct on first read is usually right — don't second-guess yourself unless you find a specific reason to change.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🎯</div>
+      <div class="tip-title">Eliminate First</div>
+      <div class="tip-body">Always eliminate at least 2 answers before choosing. AP MCQ has exactly one clearly correct answer and one or two "trap" answers that are partially true. Partial truth = wrong. If you're down to 2, pick the one that uses precise AP vocabulary.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📊</div>
+      <div class="tip-title">Stimulus Questions</div>
+      <div class="tip-body">~half the MCQ are stimulus-based (graphs, quotes, maps, cartoons). Read the stimulus FIRST, then read the question. For quotes, identify the author's position. For graphs, read axes and legend before looking at data. The answer is almost always IN the stimulus — don't rely purely on outside knowledge.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">✍️</div>
+      <div class="tip-title">FRQ: Write More, Not Less</div>
+      <div class="tip-body">Graders give points for what you GET RIGHT. They cannot subtract for incorrect information (within reason). When in doubt, write more. A 3-sentence explanation that includes the correct reasoning will score; a 1-sentence answer usually won't, even if it's technically correct.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🔑</div>
+      <div class="tip-title">Thesis = Take a Side</div>
+      <div class="tip-body">The #1 FRQ 4 mistake: wishy-washy thesis. "There are many perspectives on..." earns ZERO points. A scorable thesis makes a SPECIFIC, DEFENSIBLE claim. Say who wins — federalism OR nationalism, Congress OR President, etc. Then back it up.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📜</div>
+      <div class="tip-title">Drop Document Names</div>
+      <div class="tip-body">Cite Federalist 10, 51, 70, 78, and Brutus No. 1 by name in your FRQs. Graders love to see you connect your argument to the foundational docs. Even in FRQ types 1–3, one solid document citation can demonstrate the "complexity" sophistication graders look for.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">⚖️</div>
+      <div class="tip-title">Know Your SCOTUS Cases Cold</div>
+      <div class="tip-body">For EACH required case, memorize: parties, year, constitutional provision, holding (one sentence), and significance to course themes. Practice saying: "[Case] held that [ruling] because [constitutional reasoning]. This matters because [impact]." Do this for all 15 required cases until it's automatic.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🚫</div>
+      <div class="tip-title">Watch for Absolute Language</div>
+      <div class="tip-body">MCQ answers with "always," "never," "all," and "only" are almost always WRONG in AP Gov. Government and politics involve nuance — very few absolutes. Words like "typically," "generally," and "often" signal more accurate answer choices.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🗺</div>
+      <div class="tip-title">Know the "Big Debates"</div>
+      <div class="tip-body">The exam loves recurring tensions: Federalism vs. Nationalism · Liberty vs. Order · Majority Rule vs. Minority Rights · Presidential vs. Congressional power · Individual rights vs. Public welfare. Every unit maps to one of these tensions. Frame your FRQ arguments around them.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🧠</div>
+      <div class="tip-title">Political Vocabulary Precision</div>
+      <div class="tip-body">AP graders are looking for precise terminology. "Checks and balances" ≠ "separation of powers." "Civil liberties" ≠ "civil rights." "Enumerated" ≠ "implied." These distinctions are tested explicitly. Use the exact AP vocabulary even when writing your own FRQ responses.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📋</div>
+      <div class="tip-title">Outline FRQ 4 Before Writing</div>
+      <div class="tip-body">Spend 5 of your 40 minutes outlining. Structure: Intro (thesis + line of reasoning) → Body 1 (strongest evidence) → Body 2 (second piece of evidence + connect to doc) → Body 3 (counterargument + rebuttal) → Conclusion (complexity point). Do NOT skip the outline — it prevents disorganized rambling.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🌙</div>
+      <div class="tip-title">Night-Before Strategy</div>
+      <div class="tip-body">Review: all 15 SCOTUS cases (flash card them), the 9 foundational docs (one paragraph each), the 5 unit summary cards, and the FRQ formula templates. Do NOT read new content. Sleep is more valuable than cramming — your working memory and recall will be sharper with 8 hours of sleep than after a 2 AM study session.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📍</div>
+      <div class="tip-title">Answer Every Question</div>
+      <div class="tip-body">AP exams no longer penalize for wrong answers. NEVER leave an MCQ blank. If completely stumped, eliminate what you can and guess from remaining options. With 4 choices and 2 eliminated, you have a 50% chance. Statistically, always guess.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🏛</div>
+      <div class="tip-title">The Federalist Papers Cheat Sheet</div>
+      <div class="tip-body"><strong>Fed 10:</strong> Factions → large republic. <strong>Fed 51:</strong> Checks &amp; balances, ambition vs. ambition. <strong>Fed 70:</strong> Single energetic executive. <strong>Fed 78:</strong> Least dangerous branch, judicial review. Know author (Hamilton or Madison) for each. Madison wrote 10 &amp; 51. Hamilton wrote 70 &amp; 78.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🔄</div>
+      <div class="tip-title">Connect Across Units</div>
+      <div class="tip-body">The highest-scoring FRQ responses draw connections across units. E.g., civil rights movement (Unit 3) connects to voter registration (Unit 5), party realignment (Unit 5), and constitutional amendments (Unit 1). The "complexity" point in FRQ 4 is earned by doing this cross-unit synthesis.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">💬</div>
+      <div class="tip-title">Read the Task Verb Carefully</div>
+      <div class="tip-body"><strong>"Identify"</strong> = name it, one sentence OK. <strong>"Describe"</strong> = give details, 2-3 sentences. <strong>"Explain"</strong> = give reasons/mechanisms, 3+ sentences with "because" and "therefore." <strong>"Evaluate"</strong> = make a judgment and justify it. Doing more than asked wastes time; doing less loses points.</div>
+    </div>
+  </div>
+
+  <div class="accent-box" style="background:var(--tips-dim);border-color:var(--tips);margin-top:24px">
+    <div class="box-title" style="color:var(--tips)">🎓 The "1 Sentence Summary" Method for SCOTUS Cases</div>
+    <p>For each required case, practice this formula until it's automatic: <strong>"In [CASE NAME] ([YEAR]), the Supreme Court held that [RULING] because [CONSTITUTIONAL REASONING], which [SIGNIFICANCE/IMPACT]."</strong> Example: "In Tinker v. Des Moines (1969), the Supreme Court held that students could not be prevented from wearing protest armbands because the First Amendment protects student symbolic speech that does not substantially disrupt school, which established that constitutional rights do not stop at the schoolhouse gate."</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ VOCAB REFERENCE ═══════════════════ -->
+<div class="section" id="vocab">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--u2)">📖</div>
+    <div>
+      <div class="section-title" style="color:var(--u2)">Power Vocabulary Reference</div>
+      <div style="font-size:13px;color:var(--muted)">Must-know terms — the AP exam's favorite vocabulary</div>
+    </div>
+    <div class="section-tag" style="color:var(--u2);border-color:var(--u2);background:var(--u2-dim)">VOCAB</div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>Definition</th>
+          <th>Unit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Federalism</strong></td><td>Division of power between national and state governments</td><td style="color:var(--u1)">1</td></tr>
+        <tr><td><strong>Enumerated powers</strong></td><td>Powers specifically listed in the Constitution (Art. I §8)</td><td style="color:var(--u1)">1</td></tr>
+        <tr><td><strong>Implied powers</strong></td><td>Powers not listed but necessary to carry out enumerated powers (Elastic Clause)</td><td style="color:var(--u1)">1</td></tr>
+        <tr><td><strong>Reserved powers</strong></td><td>Powers kept by states under 10th Amendment</td><td style="color:var(--u1)">1</td></tr>
+        <tr><td><strong>Supremacy Clause</strong></td><td>Art. VI — federal law is supreme over conflicting state law</td><td style="color:var(--u1)">1</td></tr>
+        <tr><td><strong>Checks and balances</strong></td><td>Each branch has means to limit the other two branches</td><td style="color:var(--u1)">1</td></tr>
+        <tr><td><strong>Faction</strong></td><td>Madison: group united by common interest adverse to others or community</td><td style="color:var(--u1)">1</td></tr>
+        <tr><td><strong>Bicameral</strong></td><td>Two-chamber legislature (House + Senate)</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Filibuster</strong></td><td>Senate delay tactic — talking indefinitely to block vote; ended by cloture (60 votes)</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Cloture</strong></td><td>Senate vote to end filibuster — requires 60 votes</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Veto</strong></td><td>Presidential rejection of legislation; overridden by 2/3 of both chambers</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Executive order</strong></td><td>Presidential directive carrying force of law, without congressional approval</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Judicial review</strong></td>  <td>Courts' power to declare laws unconstitutional — established in Marbury v. Madison</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Stare decisis</strong></td><td>Courts follow precedent ("let the decision stand")</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Certiorari (cert)</strong></td><td>SCOTUS writ agreeing to review a lower court case; requires 4 votes (Rule of 4)</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Iron triangle</strong></td><td>Mutually reinforcing alliance: congressional committee + agency + interest group</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Bureaucratic discretion</strong></td><td>Bureaucrats' latitude to interpret vague congressional mandates</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Gerrymandering</strong></td><td>Drawing district lines to advantage one party; "packing" (concentrate opponents) and "cracking" (split opponents)</td><td style="color:var(--u2)">2</td></tr>
+        <tr><td><strong>Civil liberties</strong></td><td>Protections FROM government (1st Amend. freedoms, due process)</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Civil rights</strong></td><td>Protections OF citizens from discrimination — government must act to protect them</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Selective incorporation</strong></td><td>14th Amendment's due process clause applied to states case by case</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Establishment Clause</strong></td><td>Government cannot establish or officially endorse religion</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Free Exercise Clause</strong></td><td>Government cannot prohibit religious practice</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Prior restraint</strong></td><td>Government censorship before publication — almost always unconstitutional</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Exclusionary rule</strong></td><td>Evidence obtained illegally is inadmissible in court (Mapp v. Ohio)</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Due process</strong></td><td>Government must follow fair procedures (procedural) and respect fundamental rights (substantive)</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Equal protection</strong></td><td>14th Amendment: no state shall deny equal protection of the laws</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Strict scrutiny</strong></td><td>Highest judicial standard: law must be narrowly tailored to a compelling gov't interest (race, religion, fundamental rights)</td><td style="color:var(--u3)">3</td></tr>
+        <tr><td><strong>Political socialization</strong></td><td>Process by which people develop political beliefs and values (family, school, peers, media)</td><td style="color:var(--u4)">4</td></tr>
+        <tr><td><strong>Agenda-setting</strong></td><td>Media's power to influence which issues people think are important</td><td style="color:var(--u4)">4</td></tr>
+        <tr><td><strong>Framing</strong></td><td>How an issue is presented in media shapes how audiences respond</td><td style="color:var(--u4)">4</td></tr>
+        <tr><td><strong>Margin of error</strong></td><td>Statistical range within which true poll value likely falls (typically ±3%)</td><td style="color:var(--u4)">4</td></tr>
+        <tr><td><strong>Rational basis test</strong></td><td>Lowest judicial scrutiny: law only needs to be rationally related to legitimate gov't interest</td><td style="color:var(--u4)">4</td></tr>
+        <tr><td><strong>Party identification</strong></td><td>Psychological attachment to a political party — strongest predictor of vote choice</td><td style="color:var(--u5)">5</td></tr>
+        <tr><td><strong>Realignment</strong></td><td>Major shift in party coalitions (1932 New Deal, 1968 Southern Strategy)</td><td style="color:var(--u5)">5</td></tr>
+        <tr><td><strong>Dealignment</strong></td><td>Weakening of party identification — growing number of independents</td><td style="color:var(--u5)">5</td></tr>
+        <tr><td><strong>Super PAC</strong></td><td>Political Action Committee that can raise/spend unlimited amounts for independent expenditures (post-Citizens United)</td><td style="color:var(--u5)">5</td></tr>
+        <tr><td><strong>Electoral College</strong></td><td>538 electors chosen by states; 270 needed to win presidency</td><td style="color:var(--u5)">5</td></tr>
+        <tr><td><strong>Incumbency advantage</strong></td><td>Sitting politicians' built-in benefits: name recognition, franking privilege, fundraising network</td><td style="color:var(--u5)">5</td></tr>
+        <tr><td><strong>Retrospective voting</strong></td><td>Rewarding or punishing incumbents based on past performance</td><td style="color:var(--u5)">5</td></tr>
+        <tr><td><strong>Lobbying</strong></td><td>Direct contact with legislators or their staff to influence policy</td><td style="color:var(--u5)">5</td></tr>
+        <tr><td><strong>Free rider problem</strong></td><td>People receive benefits of collective action without contributing to it — challenges interest group formation</td><td style="color:var(--u5)">5</td></tr>
+        <tr><td><strong>Duverger's Law</strong></td><td>Plurality voting systems naturally produce two-party systems</td><td style="color:var(--u5)">5</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ COMPARISON CHARTS ═══════════════════ -->
+<div class="section" id="compare">
+  <div class="section-header">
+    <div class="section-num" style="color:var(--u1)">📊</div>
+    <div>
+      <div class="section-title" style="color:var(--u1)">Quick Comparison Charts</div>
+      <div style="font-size:13px;color:var(--muted)">Side-by-side reference for the most commonly tested comparisons</div>
+    </div>
+    <div class="section-tag" style="color:var(--u1);border-color:var(--u1);background:var(--u1-dim)">COMPARE</div>
+  </div>
+
+  <!-- Federalists vs Anti-Federalists -->
+  <h3 style="font-weight:700;margin-bottom:14px;font-size:17px">Federalists vs. Anti-Federalists</h3>
+  <div class="tbl-wrap" style="margin-bottom:32px">
+    <table>
+      <thead><tr><th>Issue</th><th style="color:var(--u1)">Federalists</th><th style="color:var(--cases)">Anti-Federalists</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Central Government</strong></td><td>Strong central gov't needed</td><td>Strong central gov't = tyranny</td></tr>
+        <tr><td><strong>Republic size</strong></td><td>Larger republic better (controls factions)</td><td>Smaller republic better (true representation)</td></tr>
+        <tr><td><strong>Bill of Rights</strong></td><td>Unnecessary — rights implied; could be dangerous (Hamilton)</td><td>Absolutely essential — written guarantee needed</td></tr>
+        <tr><td><strong>Judiciary</strong></td><td>Lifetime appointments ensure independence (Fed 78)</td><td>Unaccountable judiciary is dangerous (Brutus)</td></tr>
+        <tr><td><strong>Key figures</strong></td><td>Hamilton, Madison, Jay (Federalist Papers)</td><td>Patrick Henry, George Mason, Robert Yates (Brutus)</td></tr>
+        <tr><td><strong>Key documents</strong></td><td>Federalist No. 10, 51, 70, 78</td><td>Brutus No. 1</td></tr>
+        <tr><td><strong>Result</strong></td><td>Constitution ratified</td><td>Bill of Rights added as compromise</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- House vs Senate -->
+  <h3 style="font-weight:700;margin-bottom:14px;font-size:17px">House of Representatives vs. Senate</h3>
+  <div class="tbl-wrap" style="margin-bottom:32px">
+    <table>
+      <thead><tr><th>Feature</th><th style="color:var(--u2)">House (435)</th><th style="color:var(--u2)">Senate (100)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Term</strong></td><td>2 years</td><td>6 years (staggered — 1/3 up every 2 yrs)</td></tr>
+        <tr><td><strong>Representation</strong></td><td>Proportional to population</td><td>Equal — 2 per state</td></tr>
+        <tr><td><strong>Revenue bills</strong></td><td>Must originate in House (Art. I §7)</td><td>Can amend but not originate</td></tr>
+        <tr><td><strong>Impeachment</strong></td><td>Impeaches (majority vote)</td><td>Tries impeachments (2/3 to convict)</td></tr>
+        <tr><td><strong>Treaties</strong></td><td>No role</td><td>Advise &amp; consent (2/3 to ratify)</td></tr>
+        <tr><td><strong>Nominations</strong></td><td>No role</td><td>Confirm presidential nominations (simple majority)</td></tr>
+        <tr><td><strong>Filibuster</strong></td><td>No filibuster — Rules Committee controls debate</td><td>Filibuster allowed; cloture needs 60 votes</td></tr>
+        <tr><td><strong>Leadership</strong></td><td>Speaker of the House</td><td>President Pro Tempore + Majority Leader</td></tr>
+        <tr><td><strong>Rules Committee</strong></td><td>Powerful — controls floor debate terms</td><td>No equivalent; unanimous consent agreements</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Liberal vs Conservative -->
+  <h3 style="font-weight:700;margin-bottom:14px;font-size:17px">Liberal vs. Conservative Policy Views</h3>
+  <div class="tbl-wrap" style="margin-bottom:32px">
+    <table>
+      <thead><tr><th>Issue Area</th><th style="color:var(--u4)">Liberal/Progressive</th><th style="color:var(--u3)">Conservative</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Economy</strong></td><td>Progressive taxation, social safety net, regulation</td><td>Lower taxes, free market, deregulation</td></tr>
+        <tr><td><strong>Social issues</strong></td><td>Permissive on abortion, LGBTQ+ rights, drug policy</td><td>Traditional values, religious liberty, restrictions</td></tr>
+        <tr><td><strong>Government size</strong></td><td>Larger, active government solving social problems</td><td>Smaller government, individual responsibility</td></tr>
+        <tr><td><strong>Foreign policy</strong></td><td>Diplomacy, multilateralism, international institutions</td><td>Strong military, national sovereignty, skeptical of treaties</td></tr>
+        <tr><td><strong>Gun policy</strong></td><td>Stricter regulations, background checks</td><td>2nd Amendment rights, minimal restrictions</td></tr>
+        <tr><td><strong>Environment</strong></td><td>Strong EPA regulations, climate action</td><td>Market-based solutions, skeptical of regulation cost</td></tr>
+        <tr><td><strong>Criminal justice</strong></td><td>Reform, rehabilitation, reduce incarceration</td><td>Tough on crime, support law enforcement</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Grant Types -->
+  <h3 style="font-weight:700;margin-bottom:14px;font-size:17px">Federal Grants &amp; Federalism Tools</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Type</th><th>Definition</th><th>State Flexibility</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Categorical grant</strong></td><td>Federal $$ for very specific purpose with conditions</td><td>Low</td><td>Head Start funding</td></tr>
+        <tr><td><strong>Block grant</strong></td><td>Federal $$ for broad policy area; states decide specifics</td><td>High</td><td>TANF (welfare)</td></tr>
+        <tr><td><strong>Formula grant</strong></td><td>Distributed based on data formula (population, poverty rate)</td><td>Medium</td><td>Medicaid</td></tr>
+        <tr><td><strong>Project grant</strong></td><td>Competitive — states/localities apply</td><td>Medium</td><td>NIH research grants</td></tr>
+        <tr><td><strong>Unfunded mandate</strong></td><td>Federal requirement without accompanying funds</td><td>Negative (burden)</td><td>ADA accessibility requirements</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<div style="text-align:center;padding:48px 32px 64px;color:var(--muted);font-size:13px;">
+  <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.1em;color:var(--text);margin-bottom:12px;">GOOD LUCK ON THE EXAM 🎓</div>
+  <p>AP Gov Ultimate Review Packet · All 5 Units · 9 Foundational Docs · 15 Required Cases · 4 FRQ Types · 60+ Vocab Terms</p>
+  <p style="margin-top:6px">Return to top: <a href="#legend" style="color:var(--frq);text-decoration:none;">Table of Contents ↑</a></p>
+  <div style="margin-top:20px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em">AP EXAM STRUCTURE: Section I — 80 min MCQ (55 Qs, 50%) · Section II — 100 min FRQ (4 Qs, 50%)</div>
+</div>
+
+</body>
+</html>
